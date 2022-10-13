@@ -16,7 +16,7 @@ To read the CAN database (DBC file), use [Kvaser Database Editor 3](https://www.
 
 This code base is intended to offer CAN functionality for all the hardware we have on the car via a single interface. This allows for the particular hardware you're working on to be abstracted away and for uniform libraries for all our hardware to be written.
 
-This code base currently includes the following hardware platforms:
+This code base currently includes the following hardware platforms:...
 
 - Teensy 4.0, 4.1
 - ESP32
