@@ -96,7 +96,11 @@ public:
         kBigEndian,
         kLittleEndian
     };
+
     virtual void EncodeSignal(uint64_t *buffer) = 0;
+
+    virtual void StoreSignal(uint64_t *buffer) = 0;
+    virtual void DecodeSignal() = 0;
     virtual void DecodeSignal(uint64_t *buffer) = 0;
 };
 
@@ -198,6 +202,7 @@ public:
 
 protected:
     Atomic<SignalType> signal_;
+    Atomic<uint64_t> bits_;
 };
 
 // Needed so compiler knows these template classes exist
