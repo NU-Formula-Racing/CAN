@@ -42,6 +42,10 @@ public:
     std::array<uint8_t, 8> data_;
 };
 
+/**
+ * @brief PGNCANMessage is used to implement J1939 and NMEA2000
+ *
+ */
 class PGNCANMessage : public CANMessage
 {
 public:
@@ -436,6 +440,10 @@ public:
     virtual void Tick() = 0;
 };
 
+/**
+ * @brief This class is used to test CAN interface implementations without accessing hardware
+ *
+ */
 class MockCAN : public ICAN
 {
 public:
@@ -639,13 +647,15 @@ class MultiplexedCANTXMessage : public ICANTXMessage
 public:
     template <typename... Ts>
     /**
-     * @brief Construct a new CANTXMessage object
+     * @brief Construct a new MultiplexedCANTXMessage object, for use if your message uses a multiplexor
      *
      * @param can_interface The ICAN object the message will be transmitted on
      * @param id The ID of the CAN message
      * @param extended_id Whether the ID is extended (true) or standard (false)
      * @param length The length in bytes of the message
      * @param period The transmit period in ms of the message
+     * @param multiplexor_values_to_transmit An array of multiplexor values that gets cycled through to automatically
+     * transmit the messages
      * @param multiplexor The CANSignal that will be used to multiplex the message
      * @param signal_groups The SignalGroups contained in the message
      */
@@ -681,7 +691,8 @@ public:
 
     template <typename... Ts>
     /**
-     * @brief Construct a new CANTXMessage object, default to standard id
+     * @brief Construct a new MultiplexedCANTXMessage object, for use if your message uses a multiplexor, default to
+     * standard id
      *
      * @param can_interface The ICAN object the message will be transmitted on
      * @param id The ID of the CAN message
@@ -704,7 +715,8 @@ public:
 
     template <typename... Ts>
     /**
-     * @brief Construct a new CANTXMessage object and automatically adds it to a VirtualTimerGroup
+     * @brief Construct a new MultiplexedCANTXMessage object, for use if your message uses a multiplexor, and
+     * automatically adds it to a VirtualTimerGroup
      *
      * @param can_interface The ICAN object the message will be transmitted on
      * @param id The ID of the CAN message
@@ -740,8 +752,8 @@ public:
 
     template <typename... Ts>
     /**
-     * @brief Construct a new CANTXMessage object and automatically adds it to a VirtualTimerGroup, default to standard
-     * id
+     * @brief Construct a new MultiplexedCANTXMessage object, for use if your message uses a multiplexor, and
+     * automatically adds it to a VirtualTimerGroup, default to standard id
      *
      * @param can_interface The ICAN object the message will be transmitted on
      * @param id The ID of the CAN message
@@ -799,12 +811,8 @@ public:
     VirtualTimer &GetTransmitTimer() override { return transmit_timer_; }
 #endif
 
-    void Enable()
-    { /* transmit_timer_.Enable(); */
-    }
-    void Disable()
-    { /* transmit_timer_.Disable(); */
-    }
+    void Enable() { transmit_timer_.Enable(); }
+    void Disable() { transmit_timer_.Disable(); }
 
 private:
     ICAN &can_interface_;
