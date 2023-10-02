@@ -698,6 +698,8 @@ public:
      * @param id The ID of the CAN message
      * @param length The length in bytes of the message
      * @param period The transmit period in ms of the message
+     * @param multiplexor_values_to_transmit An array of multiplexor values that gets cycled through to automatically
+     * transmit the messages
      * @param multiplexor The CANSignal that will be used to multiplex the message
      * @param signal_groups The SignalGroups contained in the message
      */
@@ -724,6 +726,8 @@ public:
      * @param length The length in bytes of the message
      * @param period The transmit period in ms of the message
      * @param timer_group A timer group to add the transmit timer to
+     * @param multiplexor_values_to_transmit An array of multiplexor values that gets cycled through to automatically
+     * transmit the messages
      * @param multiplexor The CANSignal that will be used to multiplex the message
      * @param signal_groups The SignalGroups contained in the message
      */
@@ -760,6 +764,8 @@ public:
      * @param length The length in bytes of the message
      * @param period The transmit period in ms of the message
      * @param timer_group A timer group to add the transmit timer to
+     * @param multiplexor_values_to_transmit An array of multiplexor values that gets cycled through to automatically
+     * transmit the messages
      * @param multiplexor The CANSignal that will be used to multiplex the message
      * @param signal_groups The SignalGroups contained in the message
      */
@@ -876,14 +882,12 @@ class PGNCANTXMessage : public ICANTXMessage
 public:
     template <typename... Ts>
     /**
-     * @brief Construct a new CANTXMessage object
+     * @brief Construct a new PGNCANTXMessage object for use with J1939 or NMEA2000
      *
      * @param can_interface The ICAN object the message will be transmitted on
-     * @param id The ID of the CAN message
-     * @param extended_id Whether the ID is extended (true) or standard (false)
+     * @param id The ID of the CAN message as a PGN object
      * @param length The length in bytes of the message
      * @param period The transmit period in ms of the message
-     * @param start_time The time in ms to start transmitting the message
      * @param signals The ICANSignals contained in the message
      */
     PGNCANTXMessage(ICAN &can_interface,
@@ -902,14 +906,14 @@ public:
 
     template <typename... Ts>
     /**
-     * @brief Construct a new CANTXMessage object and automatically adds it to a VirtualTimerGroup
+     * @brief Construct a new PGNCANTXMessage object for use with J1939 or NMEA2000 and automatically adds it to a
+     * VirtualTimerGroup
      *
      * @param can_interface The ICAN object the message will be transmitted on
-     * @param id The ID of the CAN message
+     * @param id The ID of the CAN message as a PGN object
      * @param extended_id Whether the ID is extended (true) or standard (false)
      * @param length The length in bytes of the message
      * @param period The transmit period in ms of the message
-     * @param start_time The time in ms to start transmitting the message
      * @param timer_group A timer group to add the transmit timer to
      * @param signals The ICANSignals contained in the message
      */
@@ -1057,6 +1061,16 @@ template <size_t num_groups, typename MultiplexorType>
 class MultiplexedCANRXMessage : public ICANRXMessage
 {
 public:
+    /**
+     * @brief Construct a new MultiplexedCANRXMessage object, for use if your message uses a multiplexor
+     *
+     * @param can_interface The ICAN object the message will be received from
+     * @param id The ID of the message
+     * @param get_millis A function to get the current time in milliseconds
+     * @param callback_function A function to be called on message reception
+     * @param multiplexor The signal to be used as a multiplexor
+     * @param signal_groups The signalgroups to be decoded, selected based on the value of the multiplexor
+     */
     template <typename... Ts>
     MultiplexedCANRXMessage(ICAN &can_interface,
                             uint32_t id,
@@ -1199,6 +1213,15 @@ template <size_t num_signals>
 class PGNCANRXMessage : public ICANRXMessage
 {
 public:
+    /**
+     * @brief Construct a new PGNCANRXMessage object, for use receiving J1939 or NMEA2000 messages
+     *
+     * @param can_interface The ICAN object the message will be received on
+     * @param id The ID of the message, as a PGN object
+     * @param get_millis A function to get the current time in milliseconds
+     * @param callback_function An optional callback function to get called on message reception
+     * @param signals The signals contained in the message
+     */
     template <typename... Ts>
     PGNCANRXMessage(ICAN &can_interface,
                     PGNCANMessage::ExtendedId id,
