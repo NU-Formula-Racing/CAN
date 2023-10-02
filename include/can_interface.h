@@ -609,7 +609,9 @@ public:
 
     uint32_t GetID() override { return message_.id_; }
 
+#if !defined(NATIVE)  // workaround for unit tests
     VirtualTimer &GetTransmitTimer() override { return transmit_timer_; }
+#endif
 
     void Enable() { transmit_timer_.Enable(); }
     void Disable() { transmit_timer_.Disable(); }
@@ -923,7 +925,9 @@ public:
 
     uint32_t GetID() override { return message_.id_; }
 
+#if !defined(NATIVE)  // workaround for unit tests
     VirtualTimer &GetTransmitTimer() override { return transmit_timer_; }
+#endif
 
     void Enable() { transmit_timer_.Enable(); }
     void Disable() { transmit_timer_.Disable(); }
