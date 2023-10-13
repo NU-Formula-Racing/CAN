@@ -123,7 +123,7 @@ constexpr uint8_t CANSignal_generate_position(uint8_t position, uint8_t length, 
                              : ((length - (8 - (position % 8)) /* bits_in_last_byte */) / 8) /* full_bytes */ + 1))
                      + (8 - ((length - (8 - (position % 8)) /* bits_in_last_byte */) % 8) /* remaining_bits */)
                      - (8 - (position % 8)) /* bits_in_last_byte */));
-    /*
+    /* //Expanded version because the nested ternary operators are incomprehensible, but they are required for C++11
         if (byte_order == ICANSignal::ByteOrder::kLittleEndian)
         {
             return position;
@@ -823,9 +823,7 @@ public:
 private:
     ICAN &can_interface_;
     CANMessage message_;
-#if !defined(NATIVE)  // workaround for unit tests
     VirtualTimer transmit_timer_;
-#endif
     std::array<MultiplexorType, num_multiplexors_to_transmit> multiplexor_values_to_transmit_;
     ITypedCANSignal<MultiplexorType> *multiplexor_;
     std::array<IMultiplexedSignalGroup *, num_groups> signal_groups_;
