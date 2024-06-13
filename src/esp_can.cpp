@@ -125,4 +125,25 @@ void ESPCAN::Tick()
     }
 }
 
+ICAN::ErrorStatus ESPCAN::GetErrorStatus()
+{
+    twai_status_info_t status;
+    twai_get_status_info(&status);
+
+    // ref:
+    // https://docs.espressif.com/projects/esp-idf/en/v4.2.2/esp32s2/api-reference/peripherals/twai.html#error-states-and-counters
+    if (status.tx_error_counter < 128 && status.rx_error_counter < 128)
+    {
+        return ICAN::ErrorStatus::ERROR_ACTIVE;
+    }
+    else if (status.tx_error_counter >= 128 || status.rx_error_counter >= 128)
+    {
+        return ICAN::ErrorStatus::ERROR_PASSIVE;
+    }
+    else if (status.tx_error_counter >= 256)
+    {
+        return ICAN::ErrorStatus::BUS_OFF;
+    }
+}
+
 #endif
