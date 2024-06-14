@@ -33,24 +33,414 @@ NS_ :
 
 BS_:
 
-BU_: PDM WHEEL COOLANT SHUTDOWN ETC VCU SUSPENSION
+BU_: IMD BMS  PDM WHEEL COOLANT SHUTDOWN ETC VCU SUSPENSION
 
 
-BO_ 624 PDM_Current: 8 PDM
+BO_ 768 IMD PWM: 6 IMD
+ SG_ transmit_resistance : 0|16@1- (1e-05,0) [0|0] "IMD output decoding" Vector__XXX
+ SG_ transmit_status : 16|8@1- (1,0) [0|0] "Boolean" Vector__XXX
+ SG_ transmit_status : 16|8@1- (1,0) [0|0] "Boolean" Vector__XXX
+ SG_ transmit_resistance  : 0|16@1- (1,0) [0|0] "KOhms" Vector__XXX
+
+BO_ 512 BMS_Voltages_0: 15 BMS
+ SG_ Cell_V_0 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_1 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_2 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_3 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_4 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_5 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_6 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_0 : 56|64@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 513 BMS_Voltages_1: 8 BMS
+ SG_ Cell_V_7 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_8 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_9 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_10 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_11 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_12 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_13 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_1 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 514 BMS_Voltages_2: 8 BMS
+ SG_ Cell_V_14 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_15 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_16 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_17 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_18 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_19 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_20 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_2 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 515 BMS_Voltages_3: 8 BMS
+ SG_ Cell_V_21 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_22 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_23 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_24 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_25 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_26 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_27 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_3 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 516 BMS_Voltages_4: 8 BMS
+ SG_ Cell_V_28 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_29 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_30 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_31 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_32 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_33 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_34 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_4 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 517 BMS_Voltages_5: 8 BMS
+ SG_ Cell_V_35 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_36 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_37 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_38 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_39 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_40 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_41 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_5 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 518 BMS_Voltages_6: 8 BMS
+ SG_ Cell_V_42 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_43 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_44 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_45 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_46 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_47 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_48 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_6 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 519 BMS_Voltages_7: 8 BMS
+ SG_ Cell_V_49 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_50 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_51 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_52 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_53 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_54 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_55 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_7 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 520 BMS_Voltages_8: 8 BMS
+ SG_ Cell_V_56 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_57 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_58 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_59 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_60 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_61 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_62 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_8 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 521 BMS_Voltages_9: 8 BMS
+ SG_ Cell_V_63 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_64 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_65 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_66 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_67 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_68 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_69 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_9 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 522 BMS_Voltages_10: 8 BMS
+ SG_ Cell_V_70 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_71 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_72 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_73 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_74 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_75 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_76 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_110 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 523 BMS_Voltages_11: 8 BMS
+ SG_ Cell_V_77 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_78 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_79 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_80 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_81 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_82 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_83 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_211 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 524 BMS_Voltages_12: 8 BMS
+ SG_ Cell_V_84 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_85 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_86 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_87 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_88 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_89 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_90 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_212 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 525 BMS_Voltages_13: 8 BMS
+ SG_ Cell_V_91 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_92 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_93 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_94 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_95 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_96 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_97 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_213 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 526 BMS_Voltages_14: 8 BMS
+ SG_ Cell_V_98 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_99 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_100 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_101 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_102 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_103 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_104 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_214 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 527 BMS_Voltages_15: 8 BMS
+ SG_ Cell_V_105 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_106 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_107 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_108 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_109 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_110 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_111 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_115 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 528 BMS_Voltages_16: 8 BMS
+ SG_ Cell_V_112 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_113 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_114 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_115 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_116 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_117 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_118 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_216 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 529 BMS_Voltages_17: 8 BMS
+ SG_ Cell_V_119 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_120 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_121 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_122 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_123 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_124 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_125 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_217 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 530 BMS_Voltages_18: 8 BMS
+ SG_ Cell_V_126 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_127 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_128 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_129 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_130 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_131 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_132 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_218 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 531 BMS_Voltages_19: 8 BMS
+ SG_ Cell_V_133 : 0|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_134 : 8|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_135 : 16|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_136 : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_137 : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_138 : 40|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_V_139 : 48|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Cell_OCV_Offset_219 : 56|8@1- (0.004,0) [0|0] "V" Vector__XXX
+
+BO_ 544 BMS_Temperatures_0: 7 BMS
+ SG_ Cell_T_0 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_1 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_2 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_3 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_4 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_5 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_6 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 545 BMS_Temperatures_1: 7 BMS
+ SG_ Cell_T_7 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_8 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_9 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_10 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_11 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_12 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_13 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 546 BMS_Temperatures_2: 7 BMS
+ SG_ Cell_T_14 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_15 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_16 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_17 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_18 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_19 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_20 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 547 BMS_Temperatures_3: 7 BMS
+ SG_ Cell_T_21 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_22 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_23 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_24 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_25 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_26 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_27 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 548 BMS_Temperatures_4: 7 BMS
+ SG_ Cell_T_28 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_29 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_30 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_31 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_32 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_33 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_34 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 549 BMS_Temperatures_5: 7 BMS
+ SG_ Cell_T_35 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_36 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_37 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_38 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_39 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_40 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_41 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 550 BMS_Temperatures_6: 7 BMS
+ SG_ Cell_T_42 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_43 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_44 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_45 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_46 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_47 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_48 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 551 BMS_Temperatures_7: 7 BMS
+ SG_ Cell_T_49 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_50 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_51 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_52 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_53 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_54 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_55 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 552 BMS_Temperatures_8: 7 BMS
+ SG_ Cell_T_56 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_57 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_58 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_59 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_60 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_61 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_62 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 553 BMS_Temperatures_9: 7 BMS
+ SG_ Cell_T_63 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_64 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_65 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_66 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_67 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_68 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_69 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 554 BMS_Temperatures_10: 7 BMS
+ SG_ Cell_T_70 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_71 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_72 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_73 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_74 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_75 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_76 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 555 BMS_Temperatures_11: 7 BMS
+ SG_ Cell_T_77 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_78 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_79 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_80 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_81 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_82 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_83 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 556 BMS_Temperatures_12: 7 BMS
+ SG_ Cell_T_84 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_85 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_86 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_87 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_88 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_89 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_90 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 557 BMS_Temperatures_13: 7 BMS
+ SG_ Cell_T_91 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_92 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_93 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_94 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_95 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_96 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_97 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 558 BMS_Temperatures_14: 7 BMS
+ SG_ Cell_T_98 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_99 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_100 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_101 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_102 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_103 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_104 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 559 BMS_Temperatures_15: 7 BMS
+ SG_ Cell_T_105 : 0|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_106 : 8|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_107 : 16|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_108 : 24|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_109 : 32|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_110 : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Cell_T_111 : 48|8@1- (1,-40) [0|0] "C" Vector__XXX
+
+BO_ 576 BMS_SOE: 8 BMS
+ SG_ Max_Discharge_Current : 0|12@1- (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Max_Regen_Current : 12|12@1- (0.1,0) [0|0] "A" Vector__XXX
+ SG_ Battery_Voltage : 24|16@1- (0.01,0) [0|0] "V" Vector__XXX
+ SG_ Battery_Temperature : 40|8@1- (1,-40) [0|0] "C" Vector__XXX
+ SG_ Battery_Current : 48|16@1- (0.01,0) [-300|-300] "A" Vector__XXX
+
+BO_ 592 BMS_Faults: 1 BMS
+ SG_ Fault_Summary : 0|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Undervoltage_Fault : 1|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Overvoltage_Fault : 2|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Undertemperature_Fault : 3|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Overtemperature_Fault : 4|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Overcurrent_Fault : 5|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ External_Kill_Fault : 6|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Open_Wire_Fault : 7|1@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 577 BMS_Status: 5 BMS
+ SG_ BMS_State : 0|1@1- (1,0) [0|0] "" Vector__XXX
+ SG_ Max_Cell_Temp : 8|8@1- (1,-40) [0|0] "A" Vector__XXX
+ SG_ Min_Cell_Temp : 16|8@1- (1,-40) [0|0] "A" Vector__XXX
+ SG_ Max_Cell_Voltage : 24|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ Min_Cell_Voltage : 32|8@1- (0.012,2) [0|0] "V" Vector__XXX
+ SG_ BMS_SOC : 40|8@1- (0.5,0) [0|0] "%" Vector__XXX
+
+BO_ 578 BMS_CMD: 1 
+ SG_ BMS_Command : 0|8@1- (1,0) [0|0] "" Vector__XXX
+
+BO_ 624 PDM_Current: 16 PDM
+ SG_ Unreg_Amps : 0|32@1- (0.001,0) [0|0] "A" Vector__XXX
+ SG_ FiveVolt_Amps : 32|32@1- (0.001,0) [0|0] "A" Vector__XXX
  SG_ Unreg_Amps : 0|32@1- (0.001,0) [0|0] "A" Vector__XXX
  SG_ FiveVolt_Amps : 32|32@1- (0.001,0) [0|0] "A" Vector__XXX
 
-BO_ 1040 Wheel_Temp_Front: 8 WHEEL
+BO_ 1040 Wheel_Temp_Front: 16 WHEEL
+ SG_ Wheel_Temp_FrontL1 : 0|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
+ SG_ Wheel_Temp_FrontL2 : 16|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
+ SG_ Wheel_Temp_FrontR1 : 32|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
+ SG_ Wheel_Temp_FrontR2 : 48|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
  SG_ Wheel_Temp_FrontL1 : 0|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
  SG_ Wheel_Temp_FrontL2 : 16|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
  SG_ Wheel_Temp_FrontR1 : 32|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
  SG_ Wheel_Temp_FrontR2 : 48|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
 
-BO_ 1041 Wheel_Speed_Front: 4 WHEEL
+BO_ 1041 Wheel_Speed_Front: 8 WHEEL
+ SG_ Wheel_Speed_FrontL : 0|16@1- (0.01,0) [0|0] "RPS" Vector__XXX
+ SG_ Wheel_Speed_FrontR : 16|16@1- (0.01,0) [0|0] "RPS" Vector__XXX
  SG_ Wheel_Speed_FrontL : 0|16@1- (0.01,0) [0|0] "rot/s" Vector__XXX
  SG_ Wheel_Speed_FrontR : 16|16@1- (0.01,0) [0|0] "rot/s" Vector__XXX
 
-BO_ 1042 Wheel_Temp_Back: 8 WHEEL
+BO_ 1042 Wheel_Temp_Back: 16 WHEEL
+ SG_ Wheel_Temp_BackL1 : 0|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
+ SG_ Wheel_Temp_BackL2 : 16|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
+ SG_ Wheel_Temp_BackR1 : 32|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
+ SG_ Wheel_Temp_BackR2 : 48|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
  SG_ Wheel_Temp_BackL1 : 0|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
  SG_ Wheel_Temp_BackL2 : 16|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
  SG_ Wheel_Temp_BackR1 : 32|16@1- (0.01,0) [0|0] "Â°C" Vector__XXX
@@ -63,23 +453,335 @@ BO_ 1056 Coolant_Flow_Message: 8 COOLANT
 BO_ 784 Shutdown_Status: 1 SHUTDOWN
  SG_ Voltage_Sag : 0|8@1- (1,0) [0|0] "bitset, lsbit is shutdown 1, support from 1-6" Vector__XXX
 
-BO_ 16 Brake_tx: 4 ETC
+BO_ 20 Brake_tx: 4 ETC
+ SG_ Throttle_percent : 0|16@1- (1,0) [0|0] "% but 0-32767" Vector__XXX
+ SG_ Throttle_active : 16|8@1- (1,0) [0|0] "boolean" Vector__XXX
+ SG_ Brake_pedal : 24|8@1- (1,0) [0|0] "boolean" Vector__XXX
 
 BO_ 0 Drive_Status: 1 VCU
+ SG_ Drive_State : 0|8@1- (1,0) [0|0] "boolean" Vector__XXX
 
 BO_ 1312 Sus_Pots: 4 SUSPENSION
  SG_ Sus_Front : 0|16@1- (1,0) [16|16] "cm" Vector__XXX
  SG_ Sus_Back : 0|16@1- (1,0) [16|16] "cm" Vector__XXX
 
 
+CM_ SG_ 768 transmit_resistance "1000";
+CM_ SG_ 768 transmit_status "1000";
+CM_ SG_ 768 transmit_status "10";
+CM_ SG_ 768 transmit_resistance  "10";
+CM_ SG_ 512 Cell_V_0 "100";
+CM_ SG_ 512 Cell_V_1 "100";
+CM_ SG_ 512 Cell_V_2 "100";
+CM_ SG_ 512 Cell_V_3 "100";
+CM_ SG_ 512 Cell_V_4 "100";
+CM_ SG_ 512 Cell_V_5 "100";
+CM_ SG_ 512 Cell_V_6 "100";
+CM_ SG_ 512 Cell_OCV_Offset_0 "100";
+CM_ SG_ 513 Cell_V_7 "100";
+CM_ SG_ 513 Cell_V_8 "100";
+CM_ SG_ 513 Cell_V_9 "100";
+CM_ SG_ 513 Cell_V_10 "100";
+CM_ SG_ 513 Cell_V_11 "100";
+CM_ SG_ 513 Cell_V_12 "100";
+CM_ SG_ 513 Cell_V_13 "100";
+CM_ SG_ 513 Cell_OCV_Offset_1 "100";
+CM_ SG_ 514 Cell_V_14 "100";
+CM_ SG_ 514 Cell_V_15 "100";
+CM_ SG_ 514 Cell_V_16 "100";
+CM_ SG_ 514 Cell_V_17 "100";
+CM_ SG_ 514 Cell_V_18 "100";
+CM_ SG_ 514 Cell_V_19 "100";
+CM_ SG_ 514 Cell_V_20 "100";
+CM_ SG_ 514 Cell_OCV_Offset_2 "100";
+CM_ SG_ 515 Cell_V_21 "100";
+CM_ SG_ 515 Cell_V_22 "100";
+CM_ SG_ 515 Cell_V_23 "100";
+CM_ SG_ 515 Cell_V_24 "100";
+CM_ SG_ 515 Cell_V_25 "100";
+CM_ SG_ 515 Cell_V_26 "100";
+CM_ SG_ 515 Cell_V_27 "100";
+CM_ SG_ 515 Cell_OCV_Offset_3 "100";
+CM_ SG_ 516 Cell_V_28 "100";
+CM_ SG_ 516 Cell_V_29 "100";
+CM_ SG_ 516 Cell_V_30 "100";
+CM_ SG_ 516 Cell_V_31 "100";
+CM_ SG_ 516 Cell_V_32 "100";
+CM_ SG_ 516 Cell_V_33 "100";
+CM_ SG_ 516 Cell_V_34 "100";
+CM_ SG_ 516 Cell_OCV_Offset_4 "100";
+CM_ SG_ 517 Cell_V_35 "100";
+CM_ SG_ 517 Cell_V_36 "100";
+CM_ SG_ 517 Cell_V_37 "100";
+CM_ SG_ 517 Cell_V_38 "100";
+CM_ SG_ 517 Cell_V_39 "100";
+CM_ SG_ 517 Cell_V_40 "100";
+CM_ SG_ 517 Cell_V_41 "100";
+CM_ SG_ 517 Cell_OCV_Offset_5 "100";
+CM_ SG_ 518 Cell_V_42 "100";
+CM_ SG_ 518 Cell_V_43 "100";
+CM_ SG_ 518 Cell_V_44 "100";
+CM_ SG_ 518 Cell_V_45 "100";
+CM_ SG_ 518 Cell_V_46 "100";
+CM_ SG_ 518 Cell_V_47 "100";
+CM_ SG_ 518 Cell_V_48 "100";
+CM_ SG_ 518 Cell_OCV_Offset_6 "100";
+CM_ SG_ 519 Cell_V_49 "100";
+CM_ SG_ 519 Cell_V_50 "100";
+CM_ SG_ 519 Cell_V_51 "100";
+CM_ SG_ 519 Cell_V_52 "100";
+CM_ SG_ 519 Cell_V_53 "100";
+CM_ SG_ 519 Cell_V_54 "100";
+CM_ SG_ 519 Cell_V_55 "100";
+CM_ SG_ 519 Cell_OCV_Offset_7 "100";
+CM_ SG_ 520 Cell_V_56 "100";
+CM_ SG_ 520 Cell_V_57 "100";
+CM_ SG_ 520 Cell_V_58 "100";
+CM_ SG_ 520 Cell_V_59 "100";
+CM_ SG_ 520 Cell_V_60 "100";
+CM_ SG_ 520 Cell_V_61 "100";
+CM_ SG_ 520 Cell_V_62 "100";
+CM_ SG_ 520 Cell_OCV_Offset_8 "100";
+CM_ SG_ 521 Cell_V_63 "100";
+CM_ SG_ 521 Cell_V_64 "100";
+CM_ SG_ 521 Cell_V_65 "100";
+CM_ SG_ 521 Cell_V_66 "100";
+CM_ SG_ 521 Cell_V_67 "100";
+CM_ SG_ 521 Cell_V_68 "100";
+CM_ SG_ 521 Cell_V_69 "100";
+CM_ SG_ 521 Cell_OCV_Offset_9 "100";
+CM_ SG_ 522 Cell_V_70 "100";
+CM_ SG_ 522 Cell_V_71 "100";
+CM_ SG_ 522 Cell_V_72 "100";
+CM_ SG_ 522 Cell_V_73 "100";
+CM_ SG_ 522 Cell_V_74 "100";
+CM_ SG_ 522 Cell_V_75 "100";
+CM_ SG_ 522 Cell_V_76 "100";
+CM_ SG_ 522 Cell_OCV_Offset_110 "100";
+CM_ SG_ 523 Cell_V_77 "100";
+CM_ SG_ 523 Cell_V_78 "100";
+CM_ SG_ 523 Cell_V_79 "100";
+CM_ SG_ 523 Cell_V_80 "100";
+CM_ SG_ 523 Cell_V_81 "100";
+CM_ SG_ 523 Cell_V_82 "100";
+CM_ SG_ 523 Cell_V_83 "100";
+CM_ SG_ 523 Cell_OCV_Offset_211 "100";
+CM_ SG_ 524 Cell_V_84 "100";
+CM_ SG_ 524 Cell_V_85 "100";
+CM_ SG_ 524 Cell_V_86 "100";
+CM_ SG_ 524 Cell_V_87 "100";
+CM_ SG_ 524 Cell_V_88 "100";
+CM_ SG_ 524 Cell_V_89 "100";
+CM_ SG_ 524 Cell_V_90 "100";
+CM_ SG_ 524 Cell_OCV_Offset_212 "100";
+CM_ SG_ 525 Cell_V_91 "100";
+CM_ SG_ 525 Cell_V_92 "100";
+CM_ SG_ 525 Cell_V_93 "100";
+CM_ SG_ 525 Cell_V_94 "100";
+CM_ SG_ 525 Cell_V_95 "100";
+CM_ SG_ 525 Cell_V_96 "100";
+CM_ SG_ 525 Cell_V_97 "100";
+CM_ SG_ 525 Cell_OCV_Offset_213 "100";
+CM_ SG_ 526 Cell_V_98 "100";
+CM_ SG_ 526 Cell_V_99 "100";
+CM_ SG_ 526 Cell_V_100 "100";
+CM_ SG_ 526 Cell_V_101 "100";
+CM_ SG_ 526 Cell_V_102 "100";
+CM_ SG_ 526 Cell_V_103 "100";
+CM_ SG_ 526 Cell_V_104 "100";
+CM_ SG_ 526 Cell_OCV_Offset_214 "100";
+CM_ SG_ 527 Cell_V_105 "100";
+CM_ SG_ 527 Cell_V_106 "100";
+CM_ SG_ 527 Cell_V_107 "100";
+CM_ SG_ 527 Cell_V_108 "100";
+CM_ SG_ 527 Cell_V_109 "100";
+CM_ SG_ 527 Cell_V_110 "100";
+CM_ SG_ 527 Cell_V_111 "100";
+CM_ SG_ 527 Cell_OCV_Offset_115 "100";
+CM_ SG_ 528 Cell_V_112 "100";
+CM_ SG_ 528 Cell_V_113 "100";
+CM_ SG_ 528 Cell_V_114 "100";
+CM_ SG_ 528 Cell_V_115 "100";
+CM_ SG_ 528 Cell_V_116 "100";
+CM_ SG_ 528 Cell_V_117 "100";
+CM_ SG_ 528 Cell_V_118 "100";
+CM_ SG_ 528 Cell_OCV_Offset_216 "100";
+CM_ SG_ 529 Cell_V_119 "100";
+CM_ SG_ 529 Cell_V_120 "100";
+CM_ SG_ 529 Cell_V_121 "100";
+CM_ SG_ 529 Cell_V_122 "100";
+CM_ SG_ 529 Cell_V_123 "100";
+CM_ SG_ 529 Cell_V_124 "100";
+CM_ SG_ 529 Cell_V_125 "100";
+CM_ SG_ 529 Cell_OCV_Offset_217 "100";
+CM_ SG_ 530 Cell_V_126 "100";
+CM_ SG_ 530 Cell_V_127 "100";
+CM_ SG_ 530 Cell_V_128 "100";
+CM_ SG_ 530 Cell_V_129 "100";
+CM_ SG_ 530 Cell_V_130 "100";
+CM_ SG_ 530 Cell_V_131 "100";
+CM_ SG_ 530 Cell_V_132 "100";
+CM_ SG_ 530 Cell_OCV_Offset_218 "100";
+CM_ SG_ 531 Cell_V_133 "100";
+CM_ SG_ 531 Cell_V_134 "100";
+CM_ SG_ 531 Cell_V_135 "100";
+CM_ SG_ 531 Cell_V_136 "100";
+CM_ SG_ 531 Cell_V_137 "100";
+CM_ SG_ 531 Cell_V_138 "100";
+CM_ SG_ 531 Cell_V_139 "100";
+CM_ SG_ 531 Cell_OCV_Offset_219 "100";
+CM_ SG_ 544 Cell_T_0 "100";
+CM_ SG_ 544 Cell_T_1 "100";
+CM_ SG_ 544 Cell_T_2 "100";
+CM_ SG_ 544 Cell_T_3 "100";
+CM_ SG_ 544 Cell_T_4 "100";
+CM_ SG_ 544 Cell_T_5 "100";
+CM_ SG_ 544 Cell_T_6 "100";
+CM_ SG_ 545 Cell_T_7 "100";
+CM_ SG_ 545 Cell_T_8 "100";
+CM_ SG_ 545 Cell_T_9 "100";
+CM_ SG_ 545 Cell_T_10 "100";
+CM_ SG_ 545 Cell_T_11 "100";
+CM_ SG_ 545 Cell_T_12 "100";
+CM_ SG_ 545 Cell_T_13 "100";
+CM_ SG_ 546 Cell_T_14 "100";
+CM_ SG_ 546 Cell_T_15 "100";
+CM_ SG_ 546 Cell_T_16 "100";
+CM_ SG_ 546 Cell_T_17 "100";
+CM_ SG_ 546 Cell_T_18 "100";
+CM_ SG_ 546 Cell_T_19 "100";
+CM_ SG_ 546 Cell_T_20 "100";
+CM_ SG_ 547 Cell_T_21 "100";
+CM_ SG_ 547 Cell_T_22 "100";
+CM_ SG_ 547 Cell_T_23 "100";
+CM_ SG_ 547 Cell_T_24 "100";
+CM_ SG_ 547 Cell_T_25 "100";
+CM_ SG_ 547 Cell_T_26 "100";
+CM_ SG_ 547 Cell_T_27 "100";
+CM_ SG_ 548 Cell_T_28 "100";
+CM_ SG_ 548 Cell_T_29 "100";
+CM_ SG_ 548 Cell_T_30 "100";
+CM_ SG_ 548 Cell_T_31 "100";
+CM_ SG_ 548 Cell_T_32 "100";
+CM_ SG_ 548 Cell_T_33 "100";
+CM_ SG_ 548 Cell_T_34 "100";
+CM_ SG_ 549 Cell_T_35 "100";
+CM_ SG_ 549 Cell_T_36 "100";
+CM_ SG_ 549 Cell_T_37 "100";
+CM_ SG_ 549 Cell_T_38 "100";
+CM_ SG_ 549 Cell_T_39 "100";
+CM_ SG_ 549 Cell_T_40 "100";
+CM_ SG_ 549 Cell_T_41 "100";
+CM_ SG_ 550 Cell_T_42 "100";
+CM_ SG_ 550 Cell_T_43 "100";
+CM_ SG_ 550 Cell_T_44 "100";
+CM_ SG_ 550 Cell_T_45 "100";
+CM_ SG_ 550 Cell_T_46 "100";
+CM_ SG_ 550 Cell_T_47 "100";
+CM_ SG_ 550 Cell_T_48 "100";
+CM_ SG_ 551 Cell_T_49 "100";
+CM_ SG_ 551 Cell_T_50 "100";
+CM_ SG_ 551 Cell_T_51 "100";
+CM_ SG_ 551 Cell_T_52 "100";
+CM_ SG_ 551 Cell_T_53 "100";
+CM_ SG_ 551 Cell_T_54 "100";
+CM_ SG_ 551 Cell_T_55 "100";
+CM_ SG_ 552 Cell_T_56 "100";
+CM_ SG_ 552 Cell_T_57 "100";
+CM_ SG_ 552 Cell_T_58 "100";
+CM_ SG_ 552 Cell_T_59 "100";
+CM_ SG_ 552 Cell_T_60 "100";
+CM_ SG_ 552 Cell_T_61 "100";
+CM_ SG_ 552 Cell_T_62 "100";
+CM_ SG_ 553 Cell_T_63 "100";
+CM_ SG_ 553 Cell_T_64 "100";
+CM_ SG_ 553 Cell_T_65 "100";
+CM_ SG_ 553 Cell_T_66 "100";
+CM_ SG_ 553 Cell_T_67 "100";
+CM_ SG_ 553 Cell_T_68 "100";
+CM_ SG_ 553 Cell_T_69 "100";
+CM_ SG_ 554 Cell_T_70 "100";
+CM_ SG_ 554 Cell_T_71 "100";
+CM_ SG_ 554 Cell_T_72 "100";
+CM_ SG_ 554 Cell_T_73 "100";
+CM_ SG_ 554 Cell_T_74 "100";
+CM_ SG_ 554 Cell_T_75 "100";
+CM_ SG_ 554 Cell_T_76 "100";
+CM_ SG_ 555 Cell_T_77 "100";
+CM_ SG_ 555 Cell_T_78 "100";
+CM_ SG_ 555 Cell_T_79 "100";
+CM_ SG_ 555 Cell_T_80 "100";
+CM_ SG_ 555 Cell_T_81 "100";
+CM_ SG_ 555 Cell_T_82 "100";
+CM_ SG_ 555 Cell_T_83 "100";
+CM_ SG_ 556 Cell_T_84 "100";
+CM_ SG_ 556 Cell_T_85 "100";
+CM_ SG_ 556 Cell_T_86 "100";
+CM_ SG_ 556 Cell_T_87 "100";
+CM_ SG_ 556 Cell_T_88 "100";
+CM_ SG_ 556 Cell_T_89 "100";
+CM_ SG_ 556 Cell_T_90 "100";
+CM_ SG_ 557 Cell_T_91 "100";
+CM_ SG_ 557 Cell_T_92 "100";
+CM_ SG_ 557 Cell_T_93 "100";
+CM_ SG_ 557 Cell_T_94 "100";
+CM_ SG_ 557 Cell_T_95 "100";
+CM_ SG_ 557 Cell_T_96 "100";
+CM_ SG_ 557 Cell_T_97 "100";
+CM_ SG_ 558 Cell_T_98 "100";
+CM_ SG_ 558 Cell_T_99 "100";
+CM_ SG_ 558 Cell_T_100 "100";
+CM_ SG_ 558 Cell_T_101 "100";
+CM_ SG_ 558 Cell_T_102 "100";
+CM_ SG_ 558 Cell_T_103 "100";
+CM_ SG_ 558 Cell_T_104 "100";
+CM_ SG_ 559 Cell_T_105 "100";
+CM_ SG_ 559 Cell_T_106 "100";
+CM_ SG_ 559 Cell_T_107 "100";
+CM_ SG_ 559 Cell_T_108 "100";
+CM_ SG_ 559 Cell_T_109 "100";
+CM_ SG_ 559 Cell_T_110 "100";
+CM_ SG_ 559 Cell_T_111 "100";
+CM_ SG_ 576 Max_Discharge_Current "10";
+CM_ SG_ 576 Max_Regen_Current "10";
+CM_ SG_ 576 Battery_Voltage "10";
+CM_ SG_ 576 Battery_Temperature "10";
+CM_ SG_ 576 Battery_Current "10";
+CM_ SG_ 592 Fault_Summary "100";
+CM_ SG_ 592 Undervoltage_Fault "100";
+CM_ SG_ 592 Overvoltage_Fault "100";
+CM_ SG_ 592 Undertemperature_Fault "100";
+CM_ SG_ 592 Overtemperature_Fault "100";
+CM_ SG_ 592 Overcurrent_Fault "100";
+CM_ SG_ 592 External_Kill_Fault "100";
+CM_ SG_ 592 Open_Wire_Fault "100";
+CM_ SG_ 577 BMS_State "100";
+CM_ SG_ 577 Max_Cell_Temp "100";
+CM_ SG_ 577 Min_Cell_Temp "100";
+CM_ SG_ 577 Max_Cell_Voltage "100";
+CM_ SG_ 577 Min_Cell_Voltage "100";
+CM_ SG_ 577 BMS_SOC "100";
+CM_ SG_ 578 BMS_Command "";
+CM_ SG_ 624 Unreg_Amps "100";
+CM_ SG_ 624 FiveVolt_Amps "100";
 CM_ SG_ 624 Unreg_Amps "100";
 CM_ SG_ 624 FiveVolt_Amps "100";
 CM_ SG_ 1040 Wheel_Temp_FrontL1 "100";
 CM_ SG_ 1040 Wheel_Temp_FrontL2 "100";
 CM_ SG_ 1040 Wheel_Temp_FrontR1 "100";
 CM_ SG_ 1040 Wheel_Temp_FrontR2 "100";
+CM_ SG_ 1040 Wheel_Temp_FrontL1 "100";
+CM_ SG_ 1040 Wheel_Temp_FrontL2 "100";
+CM_ SG_ 1040 Wheel_Temp_FrontR1 "100";
+CM_ SG_ 1040 Wheel_Temp_FrontR2 "100";
 CM_ SG_ 1041 Wheel_Speed_FrontL "100";
 CM_ SG_ 1041 Wheel_Speed_FrontR "100";
+CM_ SG_ 1041 Wheel_Speed_FrontL "100";
+CM_ SG_ 1041 Wheel_Speed_FrontR "100";
+CM_ SG_ 1042 Wheel_Temp_BackL1 "100";
+CM_ SG_ 1042 Wheel_Temp_BackL2 "100";
+CM_ SG_ 1042 Wheel_Temp_BackR1 "100";
+CM_ SG_ 1042 Wheel_Temp_BackR2 "100";
 CM_ SG_ 1042 Wheel_Temp_BackL1 "100";
 CM_ SG_ 1042 Wheel_Temp_BackL2 "100";
 CM_ SG_ 1042 Wheel_Temp_BackR1 "100";
@@ -87,19 +789,331 @@ CM_ SG_ 1042 Wheel_Temp_BackR2 "100";
 CM_ SG_ 1056 Coolant_Temp "100";
 CM_ SG_ 1056 Coolant_Flow "500";
 CM_ SG_ 784 Voltage_Sag "1000";
+CM_ SG_ 272 Throttle_percent "10";
+CM_ SG_ 272 Throttle_active "10";
+CM_ SG_ 272 Brake_pedal "10";
+CM_ SG_ 256 Drive_State "10";
 CM_ SG_ 1312 Sus_Front "100?";
 CM_ SG_ 1312 Sus_Back "";
 BA_DEF_  "BusType" STRING ;
 BA_DEF_DEF_  "BusType" "";
 BA_ "BusType" "CAN";
+SIG_VALTYPE_ 768 transmit_resistance : 1;
+SIG_VALTYPE_ 768 transmit_status : 1;
+SIG_VALTYPE_ 768 transmit_status : 1;
+SIG_VALTYPE_ 768 transmit_resistance  : 1;
+SIG_VALTYPE_ 512 Cell_V_0 : 1;
+SIG_VALTYPE_ 512 Cell_V_1 : 1;
+SIG_VALTYPE_ 512 Cell_V_2 : 1;
+SIG_VALTYPE_ 512 Cell_V_3 : 1;
+SIG_VALTYPE_ 512 Cell_V_4 : 1;
+SIG_VALTYPE_ 512 Cell_V_5 : 1;
+SIG_VALTYPE_ 512 Cell_V_6 : 1;
+SIG_VALTYPE_ 512 Cell_OCV_Offset_0 : 1;
+SIG_VALTYPE_ 513 Cell_V_7 : 1;
+SIG_VALTYPE_ 513 Cell_V_8 : 1;
+SIG_VALTYPE_ 513 Cell_V_9 : 1;
+SIG_VALTYPE_ 513 Cell_V_10 : 1;
+SIG_VALTYPE_ 513 Cell_V_11 : 1;
+SIG_VALTYPE_ 513 Cell_V_12 : 1;
+SIG_VALTYPE_ 513 Cell_V_13 : 1;
+SIG_VALTYPE_ 513 Cell_OCV_Offset_1 : 1;
+SIG_VALTYPE_ 514 Cell_V_14 : 1;
+SIG_VALTYPE_ 514 Cell_V_15 : 1;
+SIG_VALTYPE_ 514 Cell_V_16 : 1;
+SIG_VALTYPE_ 514 Cell_V_17 : 1;
+SIG_VALTYPE_ 514 Cell_V_18 : 1;
+SIG_VALTYPE_ 514 Cell_V_19 : 1;
+SIG_VALTYPE_ 514 Cell_V_20 : 1;
+SIG_VALTYPE_ 514 Cell_OCV_Offset_2 : 1;
+SIG_VALTYPE_ 515 Cell_V_21 : 1;
+SIG_VALTYPE_ 515 Cell_V_22 : 1;
+SIG_VALTYPE_ 515 Cell_V_23 : 1;
+SIG_VALTYPE_ 515 Cell_V_24 : 1;
+SIG_VALTYPE_ 515 Cell_V_25 : 1;
+SIG_VALTYPE_ 515 Cell_V_26 : 1;
+SIG_VALTYPE_ 515 Cell_V_27 : 1;
+SIG_VALTYPE_ 515 Cell_OCV_Offset_3 : 1;
+SIG_VALTYPE_ 516 Cell_V_28 : 1;
+SIG_VALTYPE_ 516 Cell_V_29 : 1;
+SIG_VALTYPE_ 516 Cell_V_30 : 1;
+SIG_VALTYPE_ 516 Cell_V_31 : 1;
+SIG_VALTYPE_ 516 Cell_V_32 : 1;
+SIG_VALTYPE_ 516 Cell_V_33 : 1;
+SIG_VALTYPE_ 516 Cell_V_34 : 1;
+SIG_VALTYPE_ 516 Cell_OCV_Offset_4 : 1;
+SIG_VALTYPE_ 517 Cell_V_35 : 1;
+SIG_VALTYPE_ 517 Cell_V_36 : 1;
+SIG_VALTYPE_ 517 Cell_V_37 : 1;
+SIG_VALTYPE_ 517 Cell_V_38 : 1;
+SIG_VALTYPE_ 517 Cell_V_39 : 1;
+SIG_VALTYPE_ 517 Cell_V_40 : 1;
+SIG_VALTYPE_ 517 Cell_V_41 : 1;
+SIG_VALTYPE_ 517 Cell_OCV_Offset_5 : 1;
+SIG_VALTYPE_ 518 Cell_V_42 : 1;
+SIG_VALTYPE_ 518 Cell_V_43 : 1;
+SIG_VALTYPE_ 518 Cell_V_44 : 1;
+SIG_VALTYPE_ 518 Cell_V_45 : 1;
+SIG_VALTYPE_ 518 Cell_V_46 : 1;
+SIG_VALTYPE_ 518 Cell_V_47 : 1;
+SIG_VALTYPE_ 518 Cell_V_48 : 1;
+SIG_VALTYPE_ 518 Cell_OCV_Offset_6 : 1;
+SIG_VALTYPE_ 519 Cell_V_49 : 1;
+SIG_VALTYPE_ 519 Cell_V_50 : 1;
+SIG_VALTYPE_ 519 Cell_V_51 : 1;
+SIG_VALTYPE_ 519 Cell_V_52 : 1;
+SIG_VALTYPE_ 519 Cell_V_53 : 1;
+SIG_VALTYPE_ 519 Cell_V_54 : 1;
+SIG_VALTYPE_ 519 Cell_V_55 : 1;
+SIG_VALTYPE_ 519 Cell_OCV_Offset_7 : 1;
+SIG_VALTYPE_ 520 Cell_V_56 : 1;
+SIG_VALTYPE_ 520 Cell_V_57 : 1;
+SIG_VALTYPE_ 520 Cell_V_58 : 1;
+SIG_VALTYPE_ 520 Cell_V_59 : 1;
+SIG_VALTYPE_ 520 Cell_V_60 : 1;
+SIG_VALTYPE_ 520 Cell_V_61 : 1;
+SIG_VALTYPE_ 520 Cell_V_62 : 1;
+SIG_VALTYPE_ 520 Cell_OCV_Offset_8 : 1;
+SIG_VALTYPE_ 521 Cell_V_63 : 1;
+SIG_VALTYPE_ 521 Cell_V_64 : 1;
+SIG_VALTYPE_ 521 Cell_V_65 : 1;
+SIG_VALTYPE_ 521 Cell_V_66 : 1;
+SIG_VALTYPE_ 521 Cell_V_67 : 1;
+SIG_VALTYPE_ 521 Cell_V_68 : 1;
+SIG_VALTYPE_ 521 Cell_V_69 : 1;
+SIG_VALTYPE_ 521 Cell_OCV_Offset_9 : 1;
+SIG_VALTYPE_ 522 Cell_V_70 : 1;
+SIG_VALTYPE_ 522 Cell_V_71 : 1;
+SIG_VALTYPE_ 522 Cell_V_72 : 1;
+SIG_VALTYPE_ 522 Cell_V_73 : 1;
+SIG_VALTYPE_ 522 Cell_V_74 : 1;
+SIG_VALTYPE_ 522 Cell_V_75 : 1;
+SIG_VALTYPE_ 522 Cell_V_76 : 1;
+SIG_VALTYPE_ 522 Cell_OCV_Offset_110 : 1;
+SIG_VALTYPE_ 523 Cell_V_77 : 1;
+SIG_VALTYPE_ 523 Cell_V_78 : 1;
+SIG_VALTYPE_ 523 Cell_V_79 : 1;
+SIG_VALTYPE_ 523 Cell_V_80 : 1;
+SIG_VALTYPE_ 523 Cell_V_81 : 1;
+SIG_VALTYPE_ 523 Cell_V_82 : 1;
+SIG_VALTYPE_ 523 Cell_V_83 : 1;
+SIG_VALTYPE_ 523 Cell_OCV_Offset_211 : 1;
+SIG_VALTYPE_ 524 Cell_V_84 : 1;
+SIG_VALTYPE_ 524 Cell_V_85 : 1;
+SIG_VALTYPE_ 524 Cell_V_86 : 1;
+SIG_VALTYPE_ 524 Cell_V_87 : 1;
+SIG_VALTYPE_ 524 Cell_V_88 : 1;
+SIG_VALTYPE_ 524 Cell_V_89 : 1;
+SIG_VALTYPE_ 524 Cell_V_90 : 1;
+SIG_VALTYPE_ 524 Cell_OCV_Offset_212 : 1;
+SIG_VALTYPE_ 525 Cell_V_91 : 1;
+SIG_VALTYPE_ 525 Cell_V_92 : 1;
+SIG_VALTYPE_ 525 Cell_V_93 : 1;
+SIG_VALTYPE_ 525 Cell_V_94 : 1;
+SIG_VALTYPE_ 525 Cell_V_95 : 1;
+SIG_VALTYPE_ 525 Cell_V_96 : 1;
+SIG_VALTYPE_ 525 Cell_V_97 : 1;
+SIG_VALTYPE_ 525 Cell_OCV_Offset_213 : 1;
+SIG_VALTYPE_ 526 Cell_V_98 : 1;
+SIG_VALTYPE_ 526 Cell_V_99 : 1;
+SIG_VALTYPE_ 526 Cell_V_100 : 1;
+SIG_VALTYPE_ 526 Cell_V_101 : 1;
+SIG_VALTYPE_ 526 Cell_V_102 : 1;
+SIG_VALTYPE_ 526 Cell_V_103 : 1;
+SIG_VALTYPE_ 526 Cell_V_104 : 1;
+SIG_VALTYPE_ 526 Cell_OCV_Offset_214 : 1;
+SIG_VALTYPE_ 527 Cell_V_105 : 1;
+SIG_VALTYPE_ 527 Cell_V_106 : 1;
+SIG_VALTYPE_ 527 Cell_V_107 : 1;
+SIG_VALTYPE_ 527 Cell_V_108 : 1;
+SIG_VALTYPE_ 527 Cell_V_109 : 1;
+SIG_VALTYPE_ 527 Cell_V_110 : 1;
+SIG_VALTYPE_ 527 Cell_V_111 : 1;
+SIG_VALTYPE_ 527 Cell_OCV_Offset_115 : 1;
+SIG_VALTYPE_ 528 Cell_V_112 : 1;
+SIG_VALTYPE_ 528 Cell_V_113 : 1;
+SIG_VALTYPE_ 528 Cell_V_114 : 1;
+SIG_VALTYPE_ 528 Cell_V_115 : 1;
+SIG_VALTYPE_ 528 Cell_V_116 : 1;
+SIG_VALTYPE_ 528 Cell_V_117 : 1;
+SIG_VALTYPE_ 528 Cell_V_118 : 1;
+SIG_VALTYPE_ 528 Cell_OCV_Offset_216 : 1;
+SIG_VALTYPE_ 529 Cell_V_119 : 1;
+SIG_VALTYPE_ 529 Cell_V_120 : 1;
+SIG_VALTYPE_ 529 Cell_V_121 : 1;
+SIG_VALTYPE_ 529 Cell_V_122 : 1;
+SIG_VALTYPE_ 529 Cell_V_123 : 1;
+SIG_VALTYPE_ 529 Cell_V_124 : 1;
+SIG_VALTYPE_ 529 Cell_V_125 : 1;
+SIG_VALTYPE_ 529 Cell_OCV_Offset_217 : 1;
+SIG_VALTYPE_ 530 Cell_V_126 : 1;
+SIG_VALTYPE_ 530 Cell_V_127 : 1;
+SIG_VALTYPE_ 530 Cell_V_128 : 1;
+SIG_VALTYPE_ 530 Cell_V_129 : 1;
+SIG_VALTYPE_ 530 Cell_V_130 : 1;
+SIG_VALTYPE_ 530 Cell_V_131 : 1;
+SIG_VALTYPE_ 530 Cell_V_132 : 1;
+SIG_VALTYPE_ 530 Cell_OCV_Offset_218 : 1;
+SIG_VALTYPE_ 531 Cell_V_133 : 1;
+SIG_VALTYPE_ 531 Cell_V_134 : 1;
+SIG_VALTYPE_ 531 Cell_V_135 : 1;
+SIG_VALTYPE_ 531 Cell_V_136 : 1;
+SIG_VALTYPE_ 531 Cell_V_137 : 1;
+SIG_VALTYPE_ 531 Cell_V_138 : 1;
+SIG_VALTYPE_ 531 Cell_V_139 : 1;
+SIG_VALTYPE_ 531 Cell_OCV_Offset_219 : 1;
+SIG_VALTYPE_ 544 Cell_T_0 : 1;
+SIG_VALTYPE_ 544 Cell_T_1 : 1;
+SIG_VALTYPE_ 544 Cell_T_2 : 1;
+SIG_VALTYPE_ 544 Cell_T_3 : 1;
+SIG_VALTYPE_ 544 Cell_T_4 : 1;
+SIG_VALTYPE_ 544 Cell_T_5 : 1;
+SIG_VALTYPE_ 544 Cell_T_6 : 1;
+SIG_VALTYPE_ 545 Cell_T_7 : 1;
+SIG_VALTYPE_ 545 Cell_T_8 : 1;
+SIG_VALTYPE_ 545 Cell_T_9 : 1;
+SIG_VALTYPE_ 545 Cell_T_10 : 1;
+SIG_VALTYPE_ 545 Cell_T_11 : 1;
+SIG_VALTYPE_ 545 Cell_T_12 : 1;
+SIG_VALTYPE_ 545 Cell_T_13 : 1;
+SIG_VALTYPE_ 546 Cell_T_14 : 1;
+SIG_VALTYPE_ 546 Cell_T_15 : 1;
+SIG_VALTYPE_ 546 Cell_T_16 : 1;
+SIG_VALTYPE_ 546 Cell_T_17 : 1;
+SIG_VALTYPE_ 546 Cell_T_18 : 1;
+SIG_VALTYPE_ 546 Cell_T_19 : 1;
+SIG_VALTYPE_ 546 Cell_T_20 : 1;
+SIG_VALTYPE_ 547 Cell_T_21 : 1;
+SIG_VALTYPE_ 547 Cell_T_22 : 1;
+SIG_VALTYPE_ 547 Cell_T_23 : 1;
+SIG_VALTYPE_ 547 Cell_T_24 : 1;
+SIG_VALTYPE_ 547 Cell_T_25 : 1;
+SIG_VALTYPE_ 547 Cell_T_26 : 1;
+SIG_VALTYPE_ 547 Cell_T_27 : 1;
+SIG_VALTYPE_ 548 Cell_T_28 : 1;
+SIG_VALTYPE_ 548 Cell_T_29 : 1;
+SIG_VALTYPE_ 548 Cell_T_30 : 1;
+SIG_VALTYPE_ 548 Cell_T_31 : 1;
+SIG_VALTYPE_ 548 Cell_T_32 : 1;
+SIG_VALTYPE_ 548 Cell_T_33 : 1;
+SIG_VALTYPE_ 548 Cell_T_34 : 1;
+SIG_VALTYPE_ 549 Cell_T_35 : 1;
+SIG_VALTYPE_ 549 Cell_T_36 : 1;
+SIG_VALTYPE_ 549 Cell_T_37 : 1;
+SIG_VALTYPE_ 549 Cell_T_38 : 1;
+SIG_VALTYPE_ 549 Cell_T_39 : 1;
+SIG_VALTYPE_ 549 Cell_T_40 : 1;
+SIG_VALTYPE_ 549 Cell_T_41 : 1;
+SIG_VALTYPE_ 550 Cell_T_42 : 1;
+SIG_VALTYPE_ 550 Cell_T_43 : 1;
+SIG_VALTYPE_ 550 Cell_T_44 : 1;
+SIG_VALTYPE_ 550 Cell_T_45 : 1;
+SIG_VALTYPE_ 550 Cell_T_46 : 1;
+SIG_VALTYPE_ 550 Cell_T_47 : 1;
+SIG_VALTYPE_ 550 Cell_T_48 : 1;
+SIG_VALTYPE_ 551 Cell_T_49 : 1;
+SIG_VALTYPE_ 551 Cell_T_50 : 1;
+SIG_VALTYPE_ 551 Cell_T_51 : 1;
+SIG_VALTYPE_ 551 Cell_T_52 : 1;
+SIG_VALTYPE_ 551 Cell_T_53 : 1;
+SIG_VALTYPE_ 551 Cell_T_54 : 1;
+SIG_VALTYPE_ 551 Cell_T_55 : 1;
+SIG_VALTYPE_ 552 Cell_T_56 : 1;
+SIG_VALTYPE_ 552 Cell_T_57 : 1;
+SIG_VALTYPE_ 552 Cell_T_58 : 1;
+SIG_VALTYPE_ 552 Cell_T_59 : 1;
+SIG_VALTYPE_ 552 Cell_T_60 : 1;
+SIG_VALTYPE_ 552 Cell_T_61 : 1;
+SIG_VALTYPE_ 552 Cell_T_62 : 1;
+SIG_VALTYPE_ 553 Cell_T_63 : 1;
+SIG_VALTYPE_ 553 Cell_T_64 : 1;
+SIG_VALTYPE_ 553 Cell_T_65 : 1;
+SIG_VALTYPE_ 553 Cell_T_66 : 1;
+SIG_VALTYPE_ 553 Cell_T_67 : 1;
+SIG_VALTYPE_ 553 Cell_T_68 : 1;
+SIG_VALTYPE_ 553 Cell_T_69 : 1;
+SIG_VALTYPE_ 554 Cell_T_70 : 1;
+SIG_VALTYPE_ 554 Cell_T_71 : 1;
+SIG_VALTYPE_ 554 Cell_T_72 : 1;
+SIG_VALTYPE_ 554 Cell_T_73 : 1;
+SIG_VALTYPE_ 554 Cell_T_74 : 1;
+SIG_VALTYPE_ 554 Cell_T_75 : 1;
+SIG_VALTYPE_ 554 Cell_T_76 : 1;
+SIG_VALTYPE_ 555 Cell_T_77 : 1;
+SIG_VALTYPE_ 555 Cell_T_78 : 1;
+SIG_VALTYPE_ 555 Cell_T_79 : 1;
+SIG_VALTYPE_ 555 Cell_T_80 : 1;
+SIG_VALTYPE_ 555 Cell_T_81 : 1;
+SIG_VALTYPE_ 555 Cell_T_82 : 1;
+SIG_VALTYPE_ 555 Cell_T_83 : 1;
+SIG_VALTYPE_ 556 Cell_T_84 : 1;
+SIG_VALTYPE_ 556 Cell_T_85 : 1;
+SIG_VALTYPE_ 556 Cell_T_86 : 1;
+SIG_VALTYPE_ 556 Cell_T_87 : 1;
+SIG_VALTYPE_ 556 Cell_T_88 : 1;
+SIG_VALTYPE_ 556 Cell_T_89 : 1;
+SIG_VALTYPE_ 556 Cell_T_90 : 1;
+SIG_VALTYPE_ 557 Cell_T_91 : 1;
+SIG_VALTYPE_ 557 Cell_T_92 : 1;
+SIG_VALTYPE_ 557 Cell_T_93 : 1;
+SIG_VALTYPE_ 557 Cell_T_94 : 1;
+SIG_VALTYPE_ 557 Cell_T_95 : 1;
+SIG_VALTYPE_ 557 Cell_T_96 : 1;
+SIG_VALTYPE_ 557 Cell_T_97 : 1;
+SIG_VALTYPE_ 558 Cell_T_98 : 1;
+SIG_VALTYPE_ 558 Cell_T_99 : 1;
+SIG_VALTYPE_ 558 Cell_T_100 : 1;
+SIG_VALTYPE_ 558 Cell_T_101 : 1;
+SIG_VALTYPE_ 558 Cell_T_102 : 1;
+SIG_VALTYPE_ 558 Cell_T_103 : 1;
+SIG_VALTYPE_ 558 Cell_T_104 : 1;
+SIG_VALTYPE_ 559 Cell_T_105 : 1;
+SIG_VALTYPE_ 559 Cell_T_106 : 1;
+SIG_VALTYPE_ 559 Cell_T_107 : 1;
+SIG_VALTYPE_ 559 Cell_T_108 : 1;
+SIG_VALTYPE_ 559 Cell_T_109 : 1;
+SIG_VALTYPE_ 559 Cell_T_110 : 1;
+SIG_VALTYPE_ 559 Cell_T_111 : 1;
+SIG_VALTYPE_ 576 Max_Discharge_Current : 1;
+SIG_VALTYPE_ 576 Max_Regen_Current : 1;
+SIG_VALTYPE_ 576 Battery_Voltage : 1;
+SIG_VALTYPE_ 576 Battery_Temperature : 1;
+SIG_VALTYPE_ 576 Battery_Current : 1;
+SIG_VALTYPE_ 592 Fault_Summary : 1;
+SIG_VALTYPE_ 592 Undervoltage_Fault : 1;
+SIG_VALTYPE_ 592 Overvoltage_Fault : 1;
+SIG_VALTYPE_ 592 Undertemperature_Fault : 1;
+SIG_VALTYPE_ 592 Overtemperature_Fault : 1;
+SIG_VALTYPE_ 592 Overcurrent_Fault : 1;
+SIG_VALTYPE_ 592 External_Kill_Fault : 1;
+SIG_VALTYPE_ 592 Open_Wire_Fault : 1;
+SIG_VALTYPE_ 577 BMS_State : 1;
+SIG_VALTYPE_ 577 Max_Cell_Temp : 1;
+SIG_VALTYPE_ 577 Min_Cell_Temp : 1;
+SIG_VALTYPE_ 577 Max_Cell_Voltage : 1;
+SIG_VALTYPE_ 577 Min_Cell_Voltage : 1;
+SIG_VALTYPE_ 577 BMS_SOC : 1;
+SIG_VALTYPE_ 578 BMS_Command : 1;
+SIG_VALTYPE_ 624 Unreg_Amps : 1;
+SIG_VALTYPE_ 624 FiveVolt_Amps : 1;
 SIG_VALTYPE_ 624 Unreg_Amps : 1;
 SIG_VALTYPE_ 624 FiveVolt_Amps : 1;
 SIG_VALTYPE_ 1040 Wheel_Temp_FrontL1 : 1;
 SIG_VALTYPE_ 1040 Wheel_Temp_FrontL2 : 1;
 SIG_VALTYPE_ 1040 Wheel_Temp_FrontR1 : 1;
 SIG_VALTYPE_ 1040 Wheel_Temp_FrontR2 : 1;
+SIG_VALTYPE_ 1040 Wheel_Temp_FrontL1 : 1;
+SIG_VALTYPE_ 1040 Wheel_Temp_FrontL2 : 1;
+SIG_VALTYPE_ 1040 Wheel_Temp_FrontR1 : 1;
+SIG_VALTYPE_ 1040 Wheel_Temp_FrontR2 : 1;
 SIG_VALTYPE_ 1041 Wheel_Speed_FrontL : 1;
 SIG_VALTYPE_ 1041 Wheel_Speed_FrontR : 1;
+SIG_VALTYPE_ 1041 Wheel_Speed_FrontL : 1;
+SIG_VALTYPE_ 1041 Wheel_Speed_FrontR : 1;
+SIG_VALTYPE_ 1042 Wheel_Temp_BackL1 : 1;
+SIG_VALTYPE_ 1042 Wheel_Temp_BackL2 : 1;
+SIG_VALTYPE_ 1042 Wheel_Temp_BackR1 : 1;
+SIG_VALTYPE_ 1042 Wheel_Temp_BackR2 : 1;
 SIG_VALTYPE_ 1042 Wheel_Temp_BackL1 : 1;
 SIG_VALTYPE_ 1042 Wheel_Temp_BackL2 : 1;
 SIG_VALTYPE_ 1042 Wheel_Temp_BackR1 : 1;
@@ -107,5 +1121,9 @@ SIG_VALTYPE_ 1042 Wheel_Temp_BackR2 : 1;
 SIG_VALTYPE_ 1056 Coolant_Temp : 1;
 SIG_VALTYPE_ 1056 Coolant_Flow : 1;
 SIG_VALTYPE_ 784 Voltage_Sag : 1;
+SIG_VALTYPE_ 272 Throttle_percent : 1;
+SIG_VALTYPE_ 272 Throttle_active : 1;
+SIG_VALTYPE_ 272 Brake_pedal : 1;
+SIG_VALTYPE_ 256 Drive_State : 1;
 SIG_VALTYPE_ 1312 Sus_Front : 1;
 SIG_VALTYPE_ 1312 Sus_Back : 1;
