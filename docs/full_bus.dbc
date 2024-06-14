@@ -453,9 +453,13 @@ BO_ 1056 Coolant_Flow_Message: 8 COOLANT
 BO_ 784 Shutdown_Status: 1 SHUTDOWN
  SG_ Voltage_Sag : 0|8@1- (1,0) [0|0] "bitset, lsbit is shutdown 1, support from 1-6" Vector__XXX
 
-BO_ 16 Brake_tx: 4 ETC
+BO_ 20 Brake_tx: 4 ETC
+ SG_ Throttle_percent : 0|16@1- (1,0) [0|0] "% but 0-32767" Vector__XXX
+ SG_ Throttle_active : 16|8@1- (1,0) [0|0] "boolean" Vector__XXX
+ SG_ Brake_pedal : 24|8@1- (1,0) [0|0] "boolean" Vector__XXX
 
 BO_ 0 Drive_Status: 1 VCU
+ SG_ Drive_State : 0|8@1- (1,0) [0|0] "boolean" Vector__XXX
 
 BO_ 1312 Sus_Pots: 4 SUSPENSION
  SG_ Sus_Front : 0|16@1- (1,0) [16|16] "cm" Vector__XXX
@@ -785,6 +789,10 @@ CM_ SG_ 1042 Wheel_Temp_BackR2 "100";
 CM_ SG_ 1056 Coolant_Temp "100";
 CM_ SG_ 1056 Coolant_Flow "500";
 CM_ SG_ 784 Voltage_Sag "1000";
+CM_ SG_ 272 Throttle_percent "10";
+CM_ SG_ 272 Throttle_active "10";
+CM_ SG_ 272 Brake_pedal "10";
+CM_ SG_ 256 Drive_State "10";
 CM_ SG_ 1312 Sus_Front "100?";
 CM_ SG_ 1312 Sus_Back "";
 BA_DEF_  "BusType" STRING ;
@@ -1113,5 +1121,9 @@ SIG_VALTYPE_ 1042 Wheel_Temp_BackR2 : 1;
 SIG_VALTYPE_ 1056 Coolant_Temp : 1;
 SIG_VALTYPE_ 1056 Coolant_Flow : 1;
 SIG_VALTYPE_ 784 Voltage_Sag : 1;
+SIG_VALTYPE_ 272 Throttle_percent : 1;
+SIG_VALTYPE_ 272 Throttle_active : 1;
+SIG_VALTYPE_ 272 Brake_pedal : 1;
+SIG_VALTYPE_ 256 Drive_State : 1;
 SIG_VALTYPE_ 1312 Sus_Front : 1;
 SIG_VALTYPE_ 1312 Sus_Back : 1;
