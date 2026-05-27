@@ -58,6 +58,12 @@ void ESPCAN::Initialize(BaudRate baud)
     }
 }
 
+void ESPCAN::ConfigureRxFilter(uint32_t acceptanceCode, uint32_t acceptanceMask) {
+    f_config.acceptance_code = acceptanceCode;
+    f_config.acceptance_mask = acceptanceMask;
+    f_config.single_filter = true;
+}
+
 bool ESPCAN::SendMessage(CANMessage &msg)
 {
     static twai_status_info_t status;

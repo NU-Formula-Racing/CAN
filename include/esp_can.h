@@ -17,6 +17,8 @@ public:
 
     void Initialize(BaudRate baud) override;
 
+    void ConfigureRxFilter(uint32_t acceptanceCode, uint32_t acceptanceMask);
+
     bool SendMessage(CANMessage &msg) override;
 
     void RegisterRXMessage(ICANRXMessage &msg) override { rx_messages_.push_back(&msg); }
