@@ -92,7 +92,8 @@ bool TeensyCAN<bus_num>::SendMessage(CANMessage &msg)
 }
 
 template <uint8_t bus_num>
-_MB_ptr TeensyCAN<bus_num>::ProcessMessage = [](const CAN_message_t &msg) {
+_MB_ptr TeensyCAN<bus_num>::ProcessMessage = [](const CAN_message_t &msg)
+{
     std::array<uint8_t, 8> msg_data{};
     memcpy(msg_data.data(), msg.buf, 8);
     CANMessage received_message{static_cast<uint32_t>(msg.id), msg.len, msg_data};
@@ -101,4 +102,36 @@ _MB_ptr TeensyCAN<bus_num>::ProcessMessage = [](const CAN_message_t &msg) {
         rx_messages_[i]->DecodeSignals(received_message);
     }
 };
+
+template <uint8_t bus_num>
+ICAN::ErrorStatus TeensyCAN<bus_num>::GetErrorStatus()
+{
+    CAN_error_t err;
+    // Repeated code due to limitations of C++11, look into alternatives without repeated code
+    if (bus_num == 2)
+    {
+        can_bus_2.error(err, false);
+    }
+    else if (bus_num == 3)
+    {
+        can_bus_3.error(err, false);
+    }
+    else
+    {
+        can_bus_1.error(err, false);
+    }
+
+    if (err.FLT_CONF == "Error Active")
+    {
+        return ICAN::ErrorStatus::ERROR_ACTIVE;
+    }
+    else if (err.FLT_CONF == "Error Passive")
+    {
+        return ICAN::ErrorStatus::ERROR_PASSIVE;
+    }
+    else if (err.FLT_CONF == "Bus off")
+    {
+        return ICAN::ErrorStatus::BUS_OFF;
+    }
+}
 #endif

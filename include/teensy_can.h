@@ -35,6 +35,8 @@ public:
 
     void Tick() override;
 
+    ErrorStatus GetErrorStatus() override;
+
 private:
     static std::vector<ICANRXMessage *> rx_messages_;
     CAN_message_t message_t{};
